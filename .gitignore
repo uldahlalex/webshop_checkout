@@ -1,0 +1,6 @@
+.idea
+bin
+obj
+.angular
+node_modules
+api/frontend/src/app/week43day1/apikeys.ts
