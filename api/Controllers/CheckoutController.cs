@@ -1,4 +1,3 @@
-using MailKit;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers;
@@ -7,7 +6,7 @@ namespace api.Controllers;
 public class CheckoutController(HttpClientService httpService, MailService mailService) : ControllerBase
 {
 
-
+    [RateLimit(20)]
     [HttpGet]
     [Route("/api/address")]
     public async Task<AddressRootObject> AddressAutoComplete([FromQuery] string addressSearchTerm)
